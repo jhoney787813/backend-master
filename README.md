@@ -33,6 +33,7 @@ elecución de consulta
 
 
 
+
 Ejercicio 2: Nomenclatura
 Te presentamos el siguiente fragmento de código:
 function f(x, y, z) {
@@ -41,9 +42,17 @@ let b = a * z;
 let c = Math.sin(b);
 return c;
 }
-
 Reemplaza los nombres de las variables con nombres más descriptivos que reflejen mejor
 su función.
+
+R/= para dar cumplimiento con lo solicitado, primero recomendaria no solo renombar las variables si no aplicar los princios  KISS,SLAP  por lo que empezariamos por separar responsabilides en metodos que hagan una sola cosa y demanera muy simple, y posteriormente en un metodo que los engloble llamar a dichas funciones, para asi cumplir con la responsabilidad unica.
+
+<img width="850" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9b67aaa9-0bdf-4e12-ad80-8fc45dd86f55">
+
+Luego al mimso codigo planteado inicialmente, realizamos un renombre de sus variables de entrada, para que sean mas dicientes sobre el origen 
+
+<img width="870" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/1613d3cc-3d07-4bc4-9935-475f26f2da02">
+
 
 Ejercicio 3: Pensamiento lógico
 Escribe una función que tome un número entero como entrada y devuelva un array con
@@ -75,6 +84,14 @@ para la elaboración del modelo he utilizado una herramienta online llamada(http
 <img width="326" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/397b919d-b87f-4e28-836d-62647165088d">
 
 <img width="353" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9d75d492-17e6-4403-9de7-3216d8ff7547">
+
+<img width="959" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/126da772-e20c-4348-9539-f35d3242a447">
+
+NOTA: por normalizaciones de bd, el modelo propuesto cumple con lo solicitado sin embargo de requerirse una mejor optimización, se puede considerar crear una tabla detalle, que relaciónes los autores,videos y comentarios en una sola, para evitar relaciones circulares.
+
+se incluyen los scripts de sql en el codigo fuente 
+
+<img width="733" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/f659606b-1551-43f0-91ba-7ce009a72b69">
 
 
 Ejercicio 5: Arquitectura del backend
