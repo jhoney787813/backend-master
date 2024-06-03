@@ -129,8 +129,11 @@ xUnit para pruebas unitarias
 
 Patrones de diseño
 CQRS (Command and Query Responsibility Segregation): Separa las operaciones de lectura (consultas) de las de escritura (comandos) en diferentes objetos. Cada rebanada vertical implementa un comando o una consulta.
+
 Arquitectura de rebanadas verticales: Organiza el código alrededor de características o casos de uso. Cada rebanada vertical contiene todos los componentes necesarios para implementar una funcionalidad, como controladores, modelos de datos, lógica de negocio, etc.
+
 Repository Pattern: Abstrae el acceso a los datos, permitiendo diferentes implementaciones (EF Core, Dapper, etc.) sin afectar el resto del código.
+
 Unit of Work Pattern: Coordina múltiples operaciones de repositorio en una sola transacción.
 Beneficios
 Acoplamiento reducido entre rebanadas: Cada rebanada es independiente y puede cambiar sin afectar a las demás.
@@ -148,3 +151,43 @@ Ejercicio 6: Nomenclatura
 Crea un documento de políticas de nomenclatura para el equipo de desarrollo de una
 compañía, la política debe incluir nomenclatura de: bases de datos, variables, funciones,
 clases, git, etc.
+
+R/= no tengo muchos conocimientos sobre como debe ser el protocolo para la ralización de politicas, sin embargo realizando un analisis propongo aplicar para una empresa de comercio elctronico, el estandar tecnico de como un desarrollador puede tener lineamientos base para la implementación en sus desarrollos corporativos.
+
+Introducción
+La presente política de nomenclatura tiene como objetivo establecer un conjunto de reglas y recomendaciones para la creación de nombres y estructuras de archivos en el equipo de desarrollo de la empresa de comercio electrónico. Estas reglas están diseñadas para mejorar la claridad, la coherencia y la eficiencia en el desarrollo de software, facilitando la comunicación y el mantenimiento del código.
+
+Bases de datos
+
+debemos tener presente nuestro dominio y contexto para el cual nuesta bd fue creada, es decir si es para clientes, productos y/o transacciones bancarias
+
+Nomenclatura de bases de datos:
+Utilizar un prefijo para identificar la base de datos, como "ecommerce_" o "customer_".
+Utilizar un sufijo para indicar el tipo de datos, como "_products" o "_orders".
+Ejemplo: "ecommerce_products"
+Tablas y campos:
+Utilizar un prefijo para identificar la tabla, como "customer_" o "product_".
+Utilizar un sufijo para indicar el tipo de campo, como "_id" o "_name".
+Ejemplo: "customer_address_id"
+
+Repositorio de codigo
+
+se sugiere realizar las implmentaciones y seguir con el tema de integración continua, para el manejo del versionamiento a si:
+
+tener una rama master, sonde de ella se desprenda la de RELEASE, y asu ver de RELEASE la de DEVELOP, cuando se corriga un error que esta en producción y que es urgente, se recomienta crear una FEATURE de la rama Master, y hacer el PR, hacia master y posterior mente escalar a Develop y Release.
+
+Cuando no se pueda tener un ambiente controlado por temas que todos los equipos de trabajo realizan integaciones continuaas y aceleradas sobre un repositorio, se sugiere crear una feature de la master con nombres por caracteristica desarrollada, y asi cada equipo prueba su feature con base en la master y una ver terminen su desarrollo de integra mediante PR a master todos los equipos trabajarian con los ultimos cambios.
+Nomenclatura de commits:
+
+Utilizar un prefijo para identificar el tipo de rama, como "feature_" o "bugfix_".
+Utilizar un sufijo para indicar el propósito de la rama, como "_ecommerce" o "_customer".
+Ejemplo: "feature_ecommerce_order_management"
+
+Segun el versionamiento se mantico de git, se recomienta utilizar +semver:fix para incrementos de versión en los commits y/o semver pacth para correciones de bugs prioritarios.
+
+Estos son algunos ejemplos que podria aportar a el proceso de la construccion de las policitas, sin embargo se me quedan por fuera los lineamientos tecnicos que estan orientados a el codigo fuente y demas tecnologias que pueden variar segun la compañia.
+
+algunos emplos pueden ser:  cuando tenagmos una arquitectura bajo kubernetes, o AWS, Azure, incluso si se utiliza un modelo de Brokers de mensajeria como Kafka todo esto debe analizarse y detallarse por cada tecnologia.
+
+ para mi es importante seguir estas reglas, el equipo de desarrollo podrá crear un código más fácil de entender y mantener, lo que facilitará la comunicación y el mantenimiento del proyecto y /o integraciones de proyetos en la compañia.
+
