@@ -25,7 +25,7 @@ para mi esto es lo fundamental de esta implementación:
 <img width="340" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9ebbc070-1ad2-45ce-ad6a-6498a6575adf">
 
 
-elecución de consulta
+ejecución de consulta
 
 <img width="900" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/cc2808a6-d725-4452-a39c-c5407a6d3ce4">
 <img width="818" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/cf18751c-c01c-4360-9341-a0f12aa8a007">
@@ -67,9 +67,6 @@ Se asiga el valor inicial "9" y se ejecuta el metodo
 
 
 
-
-
-
 Ejercicio 4: Modelado de bases de datos
 Imagina que estás construyendo un sistema de gestión de vídeos. Diseña un modelo de
 base de datos que incluya tablas para vídeos, autores, colaboradores, comentarios, reviews
@@ -99,7 +96,92 @@ Describe cómo estructurarías el backend de una aplicación de comercio electr�
 sobre las tecnologías que utilizarías, la organización de los archivos, el uso de patrones de
 diseño, etc.
 
+Existen varias tecnologias que yo podria utilizar para realizar esta implementación, sin emgargo voy a proponer dos marcos de trabajo tanto para back como front. 
 
+podemos utlizar tecnologias como node.js o  marcos robustos como .NET.
+
+
+Propuesta 1)  como nuestra aplicación de comercio electronico su principal driver de arquitectura puede ser que sea escalable, segura y con una alta disponiblidad.
+
+propondria implmentar el patron CQRS and Vertical Slice Architecure, para satisfacer la premisa inicial de que sea escalabre, ya que:
+
+Vertical Slice Architecture​:La arquitectura de corte vertical es una técnica que nos ayuda a crear aplicaciones mantenibles separando la aplicación en torno a características o "cortes verticales" y  CQRS: significa segregación de responsabilidades de comandos y consultas, un patrón que separa las operaciones de lectura y actualización de un almacén de datos. La implementación de CQRS en la aplicación puede maximizar el rendimiento, la escalabilidad y la seguridad.
+
+Teniendo esto presente, debemos definir si nuestra api o backend tendra una tactica de diseño BFF que es lo mas recomando si queremos exponer nuestras capacidades en un futuro en algun desarrollo para aplicación movil de nuesta app decomercio electronico. 
+
+
+voy a dejar un recurso elaborado por mi para mi compañia actual donde incursiono en tecnologia .NET y enfatizo en la importancia de CQRS
+
+<img width="506" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/5adfd68b-372a-4379-9546-c95b1152f3b8">
+
+<img width="500" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/d7a1680f-87cb-468f-acea-a018c38aef45">
+
+Tecnologías
+ASP.NET Core para el backend API
+Entity Framework Core para el ORM
+MediatR para implementar CQRS
+Dapper para consultas SQL optimizadas
+Swagger para documentación de API
+xUnit para pruebas unitarias
+
+Propuesta de estuctura de proyectO BFF
+📁 BFF.API
+📁 Database
+📁 Entities
+#️⃣ Product.cs
+#️⃣ Order.cs
+#️⃣ User.cs
+#️⃣ ...
+📁 Features
+📁 Products
+📁 GetProducts
+#️⃣ GetProductsQuery.cs
+#️⃣ GetProductsQueryHandler.cs
+#️⃣ GetProductsResponse.cs
+📁 CreateProduct
+#️⃣ CreateProductCommand.cs
+#️⃣ CreateProductCommandHandler.cs
+#️⃣ CreateProductResponse.cs
+📁 Orders
+📁 PlaceOrder
+#️⃣ PlaceOrderCommand.cs
+#️⃣ PlaceOrderCommandHandler.cs
+#️⃣ PlaceOrderResponse.cs
+📁 GetOrders
+#️⃣ GetOrdersQuery.cs
+#️⃣ GetOrdersQueryHandler.cs
+#️⃣ GetOrdersResponse.cs
+📁 Users
+📁 RegisterUser
+#️⃣ RegisterUserCommand.cs
+#️⃣ RegisterUserCommandHandler.cs
+#️⃣ RegisterUserResponse.cs
+📁 LoginUser
+#️⃣ LoginUserQuery.cs
+#️⃣ LoginUserQueryHandler.cs
+#️⃣ LoginUserResponse.cs
+📁 Controllers
+#️⃣ ProductsController.cs
+#️⃣ OrdersController.cs
+#️⃣ UsersController.cs
+#️⃣ Startup.cs
+#️⃣ Program.cs
+
+Patrones de diseño
+CQRS (Command and Query Responsibility Segregation): Separa las operaciones de lectura (consultas) de las de escritura (comandos) en diferentes objetos. Cada rebanada vertical implementa un comando o una consulta.
+Arquitectura de rebanadas verticales: Organiza el código alrededor de características o casos de uso. Cada rebanada vertical contiene todos los componentes necesarios para implementar una funcionalidad, como controladores, modelos de datos, lógica de negocio, etc.
+Repository Pattern: Abstrae el acceso a los datos, permitiendo diferentes implementaciones (EF Core, Dapper, etc.) sin afectar el resto del código.
+Unit of Work Pattern: Coordina múltiples operaciones de repositorio en una sola transacción.
+Beneficios
+Acoplamiento reducido entre rebanadas: Cada rebanada es independiente y puede cambiar sin afectar a las demás.
+Alta cohesión dentro de una rebanada: Todos los componentes relacionados con una funcionalidad están juntos, lo que facilita el desarrollo y el mantenimiento.
+Flexibilidad de implementación: Cada rebanada puede usar la tecnología más adecuada para sus requisitos específicos (EF Core, Dapper, etc.).
+Escalabilidad: Las rebanadas pueden escalarse independientemente según sea necesario.
+Pruebas más fáciles: Las rebanadas se prestan a pruebas unitarias aisladas.
+
+Propuesta 2) si milar a como se realizo el codigo del api de node del punto 1, sin embargo  debemos considerar, utilizar tambien  bases de datos relacionales y no relacionales segun lo deseado, se sugiere antes de comenzar con la implementación del proyecto sin importar su tecnologia, realizar una sesión o varias de modelamiento de las necesidades y se puede utilizar la metodo logia WDD(Wine Driven Design). en donde levantemos las restriciones del negocio, drivers de arquitectura empresarial, riesgos del sistema y priorización de funcionalidades base.
+
+<img width="781" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/631132d8-02b5-4d59-8661-1910d8cb512d">
 
 
 Ejercicio 6: Nomenclatura
