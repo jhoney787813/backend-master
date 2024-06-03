@@ -124,48 +124,8 @@ Dapper para consultas SQL optimizadas
 Swagger para documentación de API
 xUnit para pruebas unitarias
 
-Propuesta de estuctura de proyectO BFF
-📁 BFF.API
-📁 Database
-📁 Entities
-#️⃣ Product.cs
-#️⃣ Order.cs
-#️⃣ User.cs
-#️⃣ ...
-📁 Features
-📁 Products
-📁 GetProducts
-#️⃣ GetProductsQuery.cs
-#️⃣ GetProductsQueryHandler.cs
-#️⃣ GetProductsResponse.cs
-📁 CreateProduct
-#️⃣ CreateProductCommand.cs
-#️⃣ CreateProductCommandHandler.cs
-#️⃣ CreateProductResponse.cs
-📁 Orders
-📁 PlaceOrder
-#️⃣ PlaceOrderCommand.cs
-#️⃣ PlaceOrderCommandHandler.cs
-#️⃣ PlaceOrderResponse.cs
-📁 GetOrders
-#️⃣ GetOrdersQuery.cs
-#️⃣ GetOrdersQueryHandler.cs
-#️⃣ GetOrdersResponse.cs
-📁 Users
-📁 RegisterUser
-#️⃣ RegisterUserCommand.cs
-#️⃣ RegisterUserCommandHandler.cs
-#️⃣ RegisterUserResponse.cs
-📁 LoginUser
-#️⃣ LoginUserQuery.cs
-#️⃣ LoginUserQueryHandler.cs
-#️⃣ LoginUserResponse.cs
-📁 Controllers
-#️⃣ ProductsController.cs
-#️⃣ OrdersController.cs
-#️⃣ UsersController.cs
-#️⃣ Startup.cs
-#️⃣ Program.cs
+<img width="379" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/500798fa-bbb8-4aa2-a06f-36cd7164fed1">
+
 
 Patrones de diseño
 CQRS (Command and Query Responsibility Segregation): Separa las operaciones de lectura (consultas) de las de escritura (comandos) en diferentes objetos. Cada rebanada vertical implementa un comando o una consulta.
