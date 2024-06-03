@@ -25,6 +25,14 @@ para mi esto es lo fundamental de esta implementación:
 <img width="340" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9ebbc070-1ad2-45ce-ad6a-6498a6575adf">
 
 
+elecución de consulta
+
+<img width="900" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/cc2808a6-d725-4452-a39c-c5407a6d3ce4">
+<img width="818" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/cf18751c-c01c-4360-9341-a0f12aa8a007">
+
+
+
+
 Ejercicio 2: Nomenclatura
 Te presentamos el siguiente fragmento de código:
 function f(x, y, z) {
@@ -41,11 +49,32 @@ Ejercicio 3: Pensamiento lógico
 Escribe una función que tome un número entero como entrada y devuelva un array con
 todos los números enteros impares desde 1 hasta el número de entrada. Por ejemplo, si el
 número de entrada es 9, la función debería devolver [1, 3, 5, 7, 9].
+
+evidencias de ejecución de salida
+Se asiga el valor inicial "9" y se ejecuta el metodo
+<img width="890" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/951151c4-356c-4670-8257-76161964cfed">
+<img width="901" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/f2b9acbf-6e6c-4f98-a7e7-b7056baa7a8f">
+
+
+
+
+
+
+
 Ejercicio 4: Modelado de bases de datos
 Imagina que estás construyendo un sistema de gestión de vídeos. Diseña un modelo de
 base de datos que incluya tablas para vídeos, autores, colaboradores, comentarios, reviews
 y usuarios. Asegúrate de incluir las claves primarias, las claves foráneas y las restricciones
 de integridad necesarias para que el sistema funcione correctamente.
+
+para la elaboración del modelo he utilizado una herramienta online llamada(https://www.dbdiagram.io/d) la cual permite de manera agil y con estructura json elaborar un modelo en tiempo de ejecución para ahorro de tiempos.
+
+<img width="605" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/6a6176e5-fc6f-43ee-919f-1407392352ad">
+
+
+<img width="326" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/397b919d-b87f-4e28-836d-62647165088d">
+
+<img width="353" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9d75d492-17e6-4403-9de7-3216d8ff7547">
 
 
 Ejercicio 5: Arquitectura del backend
