@@ -2,9 +2,9 @@
 ![image](https://github.com/user-attachments/assets/cb481119-0d14-4f2d-a640-c95a769b167a)
 
 # backend-master
-Desarrollador FullsTack
+Desarrollador FullsTack en Linkedin
 
-**Aplicación para MASTER COMPANY en LinkedIn**
+**Aplicación para MASTER COMPANY**
 
 ## Contenido de la Prueba Técnica
 
