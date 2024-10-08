@@ -2,7 +2,7 @@
 ![image](https://github.com/user-attachments/assets/cb481119-0d14-4f2d-a640-c95a769b167a)
 
 # backend-master
-Desarrollador FullsTack  aplicado en Linkedin para MASTER COMPANY
+Desarrollador FullsTack
 
 **Aplicación para MASTER COMPANY en LinkedIn**
 
@@ -218,3 +218,4 @@ algunos emplos pueden ser:  cuando tenagmos una arquitectura bajo kubernetes, o 
 
  para mi es importante seguir estas reglas, el equipo de desarrollo podrá crear un código más fácil de entender y mantener, lo que facilitará la comunicación y el mantenimiento del proyecto y /o integraciones de proyetos en la compañia.
 
+[Jhon E -> GitHub Profile](https://github.com/jhoney787813/)
