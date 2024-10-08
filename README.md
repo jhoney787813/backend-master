@@ -4,26 +4,40 @@
 # backend-master
 Desarrollador FullsTack  aplicado en Linkedin para MASTER COMPANY
 
-CONTENIDO DE LA PRUEBA TECNICA
+**Aplicación para MASTER COMPANY en LinkedIn**
 
-Objetivo de la prueba: Evaluar tus habilidades en Backend
-Ejercicio 1: Consumo de APIs
-Crea una aplicación Node.js que consuma la API de GitHub y muestre los 10 repositorios
-más populares del usuario "google".
+## Contenido de la Prueba Técnica
 
-R/ Se me pide raliza la APi que consuma de google en node js, para eso implemente los paquetes de Axios, express server y documentación de swagger.  
-no se me espeficica que patron o tacticas utilizas para el desarrollo de esta api, sin embargo la implemente del siguiente modo ya que resalto lo siguiente segun las esperiencias obtenidas en proyectos anteriores.
+### Objetivo de la Prueba
+Evaluar tus habilidades en **Backend**.
 
-Utilizo una arquitectura limpia o (Clean Architecture), ya que nos permite escalar una aplicación y nos promueve la extensión y mantenibilidad de la misma, donde tambien se tienen en cuenta los principios SOLID.
+### Ejercicio 1: Consumo de APIs
+**Instrucción:** Crea una aplicación Node.js que consuma la API de GitHub y muestre los 10 repositorios más populares del usuario "google".
 
-para mi esto es lo fundamental de esta implementación:
+#### Respuesta
+Para esta tarea, se me solicita realizar una API en Node.js que consuma datos de GitHub. Para ello, implementé los siguientes paquetes:
 
-+ Ayuda a separar la lógica de negocio de la lógica de presentación.
-+ Permite una mayor flexibilidad y escalabilidad.
-+ Facilita la mantenibilidad y el desarrollo de la aplicación.
-+ Reduce la complejidad y la cantidad de código.
-+ Mejora la legibilidad y la comprensión del código.
- yo he querido plasmar con esta pequeña aplicación el patrón de diseño "Clean Architecture", ya que se basa en la separación de concerns (preocupaciones) y la utilización de interfaces para comunicar entre los diferentes capas de la aplicación. dando como resultado una distribución logia entre componentes y carpetas, sin embargo tambien puede ser planteada en paquetes externos a el proyecto, para mayor modularidad.
+- **Axios**
+- **Express Server**
+- **Documentación de Swagger**
+
+No se especifica qué patrón o tácticas utilizar para el desarrollo de esta API, pero la implementé de la siguiente manera, basándome en mis experiencias anteriores en proyectos.
+
+### Arquitectura Utilizada
+He optado por implementar una **Clean Architecture**, que ofrece varias ventajas:
+
+- **Separación de la Lógica de Negocio:** Separa la lógica de negocio de la lógica de presentación.
+- **Flexibilidad y Escalabilidad:** Facilita la adición de nuevas funcionalidades.
+- **Mantenibilidad:** Facilita el mantenimiento y desarrollo de la aplicación.
+- **Reducción de Complejidad:** Disminuye la complejidad y la cantidad de código.
+- **Mejora de la Legibilidad:** Aumenta la legibilidad y comprensión del código.
+
+### Implementación
+Con esta pequeña aplicación, he querido plasmar el patrón de diseño **Clean Architecture**, que se basa en la separación de "concerns" (preocupaciones) y la utilización de interfaces para comunicar las diferentes capas de la aplicación. Esto resulta en:
+
+- Una distribución lógica entre componentes y carpetas.
+- Posibilidad de plantear la estructura en paquetes externos al proyecto para una mayor modularidad.
+
 
 <img width="340" alt="image" src="https://github.com/jhoney787813/backend-master/assets/51183760/9ebbc070-1ad2-45ce-ad6a-6498a6575adf">
 
